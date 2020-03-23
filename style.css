@@ -1,0 +1,106 @@
+@font-face {
+font-family:'digital-clock-font';
+src:url(font/digital-7.ttf)
+}
+
+body {
+margin:0 auto;
+font-family:'digital-clock-font'
+}
+
+.day {
+background:url(image/day.png);
+background-position:center;
+background-repeat:no-repeat;
+background-size:cover
+}
+
+.sunrise {
+background:url(image/sunset.png);
+background-position:center;
+background-size:cover;
+height:100vh
+}
+
+.night {
+background:url(image/night.png);
+background-position:center;
+background-repeat:no-repeat;
+background-size:cover;
+height:100vh
+}
+
+#center {
+position:fixed;
+top:45%;
+left:40%
+}
+
+#point {
+position:fixed;
+top:45%;
+left:40%
+}
+
+.dot {
+height:700px;
+width:700px;
+background-image:url(image/clock.png);
+background-repeat:no-repeat;
+background-size:cover;
+border-radius:50%;
+display:inline-block;
+border-style:solid;
+border-color:#000;
+position:fixed;
+top:0;
+bottom:0;
+left:0;
+right:0;
+margin:auto
+}
+
+.clock {
+transform:translateX(-%50%);
+color:#000;
+font-size:110px;
+width:100px;
+height:100px;
+border-radius:50%;
+animation:spin 60s linear infinite;
+position:fixed;
+top:0;
+bottom:0;
+left:0;
+right:0;
+margin:auto
+}
+
+@keyframes spin {
+100% {
+transform:rotate(360deg);
+filter:hue-rotate(360deg)
+}
+}
+
+@media only screen and (max-width: 460px) {
+.clock {
+font-size:25px
+}
+
+.dot {
+height:300px;
+width:300px
+}
+}
+
+@media only screen and (min-width: 461px) and (max-width: 690px ) {
+.clock {
+font-size:50px
+}
+
+.dot {
+height:300px;
+width:300px
+}
+}
